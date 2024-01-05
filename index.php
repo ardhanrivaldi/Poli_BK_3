@@ -23,13 +23,23 @@ include_once("koneksi.php");
 </head>
 
 <body>
-    <!-- Responsive navbar-->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #D2B48C;">
-        <div class="container px-5">
-            <a class="navbar-brand" href="index.php">Poliklinik Udinus</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+   <!-- Responsive navbar-->
+<nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #9FA6B2;">
+    <div class="container px-5">
+        <a class="navbar-brand" href="index.php">Poliklinik Udinus</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.php">Home</a>
+                </li>
+            </ul>
         </div>
-    </nav>
+    </div>
+</nav>
+
     <?php 
         if (isset($_GET['page'])) {
             if ($_GET['page'] === 'loginAdmin') {
@@ -43,105 +53,91 @@ include_once("koneksi.php");
             }
         } else {
     ?>
-        <!-- Header-->
-        <header class="py-5" style="background-color: #D2B48C;"> <!-- Ubah Color Banner disini -->
-        <div class="container px-5">
-            <div class="row gx-5 justify-content-center">
-                <div class="col-lg-6">
-                    <div class="text-center my-5">
-                        <h1 class="display-5 fw-bolder text-white mb-2">Sistem Temu Janji <br>Pasien - Dokter</h1>
-                        <p class="lead text-white-50 mb-4">Bimbingan Karir 2023 Bidang Web</p>
+        <!-- Header -->
+<header class="bg-secondary">
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-8 text-center">
+                <h1 class="display-4 text-white fw-bold">Selamat datang di Poliklinik Udinus</h1>
+                <p class="lead text-white-50">Sistem Temu Janji Pasien - Dokter untuk kenyamanan Anda.</p>
+            </div>
+        </div>
+    </div>
+</header>
+   <!-- Features section-->
+<section class="py-5 border-bottom text-center" id="features">
+    <div class="container px-5 my-5">
+        <div class="row g-5">
+            <!-- Feature - Login Sebagai Admin -->
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="card h-100 border-primary">
+                    <div class="card-body p-4">
+                        <div class="feature bg-primary bg-secondary text-white rounded-3 mb-3"><i class="bi bi-person"></i></div>
+                        <h2 class="h4 fw-bolder">Login Sebagai Admin</h2>
+                        <p>Apabila Anda adalah seorang Admin, silahkan Login terlebih dahulu untuk mengelola data website!</p>
+                        <a class="text-decoration-none" href="index.php?page=loginAdmin">
+                            Klik Link Berikut
+                            <i class="bi bi-arrow-right-circle"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature - Login Sebagai Dokter -->
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="card h-100 border-primary">
+                    <div class="card-body p-4">
+                        <div class="feature bg-primary bg-secondary text-white rounded-3 mb-3"><i class="bi bi-person"></i></div>
+                        <h2 class="h4 fw-bolder">Login Sebagai Dokter</h2>
+                        <p>Apabila Anda adalah seorang Dokter, silahkan Login terlebih dahulu untuk memulai melayani Pasien!</p>
+                        <a class="text-decoration-none" href="index.php?page=loginDokter">
+                            Klik Link Berikut
+                            <i class="bi bi-arrow-right-circle"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature - Login Sebagai Pasien -->
+            <div class="col-lg-6 mb-5 mb-lg-0">
+                <div class="card h-100 border-primary">
+                    <div class="card-body p-4">
+                        <div class="feature bg-primary bg-secondary text-white rounded-3 mb-3"><i class="bi bi-person"></i></div>
+                        <h2 class="h4 fw-bolder">Login Sebagai Pasien</h2>
+                        <p>Apabila Anda adalah seorang Pasien, silahkan Login terlebih dahulu untuk mulai menggunakan layanan kami!</p>
+                        <a class="text-decoration-none" href="index.php?page=loginPasien">
+                            Klik Link Berikut
+                            <i class="bi bi-arrow-right-circle"></i>
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
-    </header>
-    <!-- Features section-->
-    <section class="py-5 border-bottom" id="features">
-        <div class="container px-5 my-5">
-            <div class="row g-5">
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="feature bg-primary bg-secondary text-white rounded-3 mb-3"><i class="bi bi-person"></i></div>
-                    <h2 class="h4 fw-bolder">Login Sebagai Admin</h2>
-                    <p>Apabila Anda adalah seorang Admin, silahkan Login terlebih dahulu untuk mengelola data website!</p>
-                    <a class="text-decoration-none" href="index.php?page=loginAdmin">
-                        Klik Link Berikut
-                        <i class="bbi bi-arrow-right-circle"></i>
-                    </a>
-                </div>
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="feature bg-primary bg-secondary text-white rounded-3 mb-3"><i class="bi bi-person"></i></div>
-                    <h2 class="h4 fw-bolder">Login Sebagai Dokter</h2>
-                    <p>Apabila Anda adalah seorang Dokter, silahkan Login terlebih dahulu untuk memulai melayani Pasien!</p>
-                    <a class="text-decoration-none" href="index.php?page=loginDokter">
-                        Klik Link Berikut
-                        <i class="bbi bi-arrow-right-circle"></i>
-                    </a>
-                </div>
-                <div class="col-lg-6 mb-5 mb-lg-0">
-                    <div class="feature bg-primary bg-secondary text-white rounded-3 mb-3"><i class="bi bi-person"></i></div>
-                    <h2 class="h4 fw-bolder">Login Sebagai Pasien</h2>
-                    <p>Apabila Anda adalah seorang Pasien, silahkan Login terlebih dahulu untuk mulai menggunakan layanan kami!</p>
-                    <a class="text-decoration-none" href="index.php?page=loginPasien">
-                        Klik Link Berikut
-                        <i class="bbi bi-arrow-right-circle"></i>
-                    </a>
-                </div>
+    </div>
+</section>
+
+
+   <!-- Footer-->
+<footer class="main-footer py-3" style="background-color: #dcdcdc; color: #333;">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">
+                <strong>&copy;
+                    <script>
+                        document.write(new Date().getFullYear())
+                    </script>
+                    <a href="https://bengkelkoding.dinus.ac.id/" style="color: #333;">Bengkel Koding</a>.
+                </strong>
+                All rights reserved.
+            </div>
+            <div class="col-lg-6 text-lg-end">
+                <span class="d-none d-sm-inline-block">
+                    <b>Version</b> 1.0.0
+                </span>
             </div>
         </div>
-    </section>
-    <!-- Testimonials section-->
-    <section class="py-5 border-bottom">
-        <div class="container px-5 my-5 px-5">
-            <div class="text-center mb-5">
-                <h2 class="fw-bolder">Testimoni Pasien</h2>
-                <p class="lead mb-0">Para Pasien yang Setia</p>
-            </div>
-            <div class="row gx-5 justify-content-center">
-                <div class="col-lg-6">
-                    <!-- Testimonial 1-->
-                    <div class="card mb-4">
-                        <div class="card-body p-4">
-                            <div class="d-flex">
-                                <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1"></i></div>
-                                <div class="ms-4">
-                                    <p class="mb-1">Pelayanan di web ini sangat cepat dan mudah. Detail histori tercatat lengkap,
-                                        termasuk catatan obat. Harga pelayanan terjangkau, Dokter ramah, pokoke mantab pol!</p>
-                                    <div class="small text-muted">- Adi, Semarang</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Testimonial 2-->
-                    <div class="card">
-                        <div class="card-body p-4">
-                            <div class="d-flex">
-                                <div class="flex-shrink-0"><i class="bi bi-chat-right-quote-fill text-primary fs-1"></i></div>
-                                <div class="ms-4">
-                                    <p class="mb-1">Aku tidak pernah merasakan mudahnya berobat sebelum Aku mengenal web ini.
-                                        Web yang mudah digunakan dan dokter yang termapil membuat berobat menjadi lebih menyenangkan!</p>
-                                    <div class="small text-muted">- Ida, Semarang</div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Footer-->
-    <footer class="main-footer px-4 py-2">
-        <strong>Copyright ©
-            <script>
-                document.write(new Date().getFullYear())
-            </script>
-            <a href="https://bengkelkoding.dinus.ac.id/">Bengkel Koding</a>.
-        </strong>
-        All rights reserved.
-        <div class="float-right d-none d-sm-inline-block">
-            <b>Version</b> 1.0.0
-        </div>
-    </footer>
+    </div>
+</footer>
     <?php
         }
     ?>
