@@ -46,7 +46,7 @@
         $stmt_daftar_poli->execute();
         $stmt_daftar_poli->close();
 
-        header('Location: http://'.$_SERVER['HTTP_HOST'].'/polibayu/menuperiksaDokter.php');
+        header('Location: http://'.$_SERVER['HTTP_HOST'].'/poliardhan/menuperiksaDokter.php');
         exit();
     }
 ?>

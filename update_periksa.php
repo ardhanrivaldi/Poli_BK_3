@@ -51,7 +51,7 @@
             $stmt_obat->close();
         }
         
-        header('Location: http://'.$_SERVER['HTTP_HOST'].'/polibayu/menuperiksaDokter.php');
+        header('Location: http://'.$_SERVER['HTTP_HOST'].'/poliardhan/menuperiksaDokter.php');
         exit();
     }
 ?>
